@@ -8,7 +8,7 @@ Docker image to setup a Tor relay with [nyx](https://nyx.torproject.org/) monito
 ```bash
 docker run -d \
 	--restart always \
-	-v tor-relay-data:/home/tor/data:rw
+	-v tor-relay-data:/var/lib/tor:rw
 	-v /etc/localtime:/etc/localtime:ro \
 	-p 9001:9001 \
 	-e RELAY_NICKNAME='ChangeMe' \
@@ -23,7 +23,7 @@ docker run -d \
 ```bash
 docker run -d \
 	--restart always \
-	-v tor-relay-data:/home/tor/data:rw
+	-v tor-relay-data:/var/lib/tor:rw
 	-v /etc/localtime:/etc/localtime:ro \
 	-p 9001:9001 \
 	-e RELAY_TYPE='bridge' \
@@ -38,7 +38,7 @@ docker run -d \
 ```bash
 docker run -d \
 	--restart always \
-	-v tor-relay-data:/home/tor/data:rw
+	-v tor-relay-data:/var/lib/tor:rw
 	-v /etc/localtime:/etc/localtime:ro \
 	-p 9001:9001 \
 	-e RELAY_TYPE='exit' \
