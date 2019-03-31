@@ -16,7 +16,6 @@ for relaytype in bridge middle exit; do
 	sed -i "s/RELAY_CTRLPORT/${RELAY_CTRLPORT}/g" "$file"
 	sed -i "s/RELAY_ACCOUNTING_MAX/${RELAY_ACCOUNTING_MAX}/g" "$file"
 	sed -i "s/RELAY_ACCOUNTING_START/${RELAY_ACCOUNTING_START}/g" "$file"
-	sed -i "s/RELAY_DATADIR/${RELAY_DATADIR}/g" "$file"
 done
 
 exec tor -f "/etc/tor/torrc.${RELAY_TYPE}"

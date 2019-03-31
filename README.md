@@ -14,4 +14,3 @@
 | **RELAY_CTRLPORT**           | Default port used for control interface (ControlPort)                        | 9051          |
 | **RELAY_ACCOUNTING_MAX**     | Default threshold for sent and recieve (AccountingMax)                       | 1 GBytes      |
 | **RELAY_ACCOUNTING_START**   | threshold rest (AccountingStart)                                             | day 00:00     |
-| **RELAY_DATADIR**            | The directory for keeping all the keys/etc (DataDirectory)                   | /var/lib/tor  |
