@@ -3,6 +3,8 @@ Docker image to setup a Tor relay with [nyx](https://nyx.torproject.org/) monito
 ![Docker Build Status](https://img.shields.io/docker/cloud/build/jarlave/tor-relay-nyx.svg)
 ![Docker Image Size](https://img.shields.io/microbadger/image-size/jarlave/tor-relay-nyx.svg)
 
+Based on [Jessfraz](https://github.com/jessfraz/dockerfiles/tree/master/tor-relay) Docker.
+
 ### Middle relay
 
 ```bash
