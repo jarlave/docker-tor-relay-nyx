@@ -8,7 +8,7 @@ Docker image to setup a Tor relay with [nyx](https://nyx.torproject.org/) monito
 ```bash
 docker run -d \
 	--restart always \
-	-v tor-relay-data:/var/lib/tor:rw
+	-v tor-relay-data:/home/tor/data:rw
 	-v /etc/localtime:/etc/localtime:ro \
 	-p 9001:9001 \
 	-e RELAY_NICKNAME='ChangeMe' \
@@ -23,7 +23,7 @@ docker run -d \
 ```bash
 docker run -d \
 	--restart always \
-	-v tor-relay-data:/var/lib/tor:rw
+	-v tor-relay-data:/home/tor/data:rw
 	-v /etc/localtime:/etc/localtime:ro \
 	-p 9001:9001 \
 	-e RELAY_TYPE='bridge' \
@@ -38,7 +38,7 @@ docker run -d \
 ```bash
 docker run -d \
 	--restart always \
-	-v tor-relay-data:/var/lib/tor:rw
+	-v tor-relay-data:/home/tor/data:rw
 	-v /etc/localtime:/etc/localtime:ro \
 	-p 9001:9001 \
 	-e RELAY_TYPE='exit' \
@@ -64,6 +64,7 @@ docker run -d \
 | **RELAY_CTRLPORT**           | Default port used for control interface (ControlPort)                        | 9051          |
 | **RELAY_ACCOUNTING_MAX**     | Default threshold for sent and recieve (AccountingMax)                       | 1 GBytes      |
 | **RELAY_ACCOUNTING_START**   | threshold rest (AccountingStart)                                             | day 00:00     |
+| **RELAY_MAX_MEM**            | threshold above which Tor will stop queueing data (MaxMemInQueues)           | 512 MB        |
 
 ### Open nyx
 

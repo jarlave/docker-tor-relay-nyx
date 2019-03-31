@@ -264,3 +264,5 @@ ExitPolicy reject *:*
 ## a private bridge, for example because you'll give out your bridge
 ## address manually to your friends, uncomment this line:
 #PublishServerDescriptor 0
+
+MaxMemInQueues RELAY_MAX_MEM
